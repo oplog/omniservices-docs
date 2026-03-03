@@ -1,7 +1,7 @@
 {
   "$schema": "https://oplog.one/docs.json",
   "theme": "willow",
-  "name": "OPLOG.One Documentation",
+  "name": "OPLOG.ONE Documentation",
   "colors": {
     "primary": "#00A1E0",
     "light": "#3BB8F0",

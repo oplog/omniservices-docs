@@ -22,13 +22,56 @@ The OPLOG.ONE API provides comprehensive logistics and supply chain management c
   </Card>
 </CardGroup>
 
-## Base URL
+## Environments
 
-All API requests should be made to:
+OPLOG.ONE provides two separate environments. Each environment has its own base URL, credentials, and data — they are completely isolated from each other.
 
-```
-https://api.oplog.one/openapi/v1
-```
+<Tabs>
+  <Tab title="Production">
+    **Base URL**
+    ```
+    https://api.oplog.one/openapi/v1
+    ```
+
+    The production environment is your live system. All API requests here affect real orders, shipments, and inventory.
+
+    **Example Request**
+    ```bash
+    curl -X GET "https://api.oplog.one/openapi/v1/Products" \
+      -H "X-Tenant-Id: your-tenant-id" \
+      -H "Authorization: Bearer your-static-token" \
+      -H "Content-Type: application/json"
+    ```
+
+    <Warning>
+      Only use production after you have fully tested your integration in the staging environment.
+    </Warning>
+  </Tab>
+  <Tab title="Staging">
+    **Base URL**
+    ```
+    https://api.staging.oplog.one/openapi/v1
+    ```
+
+    The staging environment is a safe sandbox for development and testing. No real shipments are created and no live data is affected.
+
+    **Example Request**
+    ```bash
+    curl -X GET "https://api.staging.oplog.one/openapi/v1/Products" \
+      -H "X-Tenant-Id: your-staging-tenant-id" \
+      -H "Authorization: Bearer your-staging-static-token" \
+      -H "Content-Type: application/json"
+    ```
+
+    <Info>
+      Don't have a staging account yet? Contact our support team at [onboarding@oplog.io](mailto:onboarding@oplog.io) to get started. See the [Staging Environment](/staging) guide for full setup details.
+    </Info>
+  </Tab>
+</Tabs>
+
+<Warning>
+  Production and staging credentials are not interchangeable. Never use production credentials in staging or vice versa.
+</Warning>
 
 ## Authentication
 
@@ -40,8 +83,14 @@ Authorization: Bearer your-static-token
 Content-Type: application/json
 ```
 
+| Header | Description |
+|:-------|:------------|
+| `X-Tenant-Id` | Your unique tenant identifier, provided during integration setup |
+| `Authorization` | Bearer token using your StaticToken |
+| `Content-Type` | Must be `application/json` for all requests |
+
 <Warning>
-  Ensure you include both `X-Tenant-Id` and `Authorization` headers in every request. Missing authentication will result in 401 Unauthorized errors.
+  Ensure you include both `X-Tenant-Id` and `Authorization` headers in every request. Missing authentication will result in a 401 Unauthorized error.
 </Warning>
 
 ## Response Format

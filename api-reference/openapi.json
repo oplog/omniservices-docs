@@ -11,7 +11,7 @@
       "description": "Production Server"
     },
     {
-      "url": "https://one-webapi-stg-01-dac9drerbbc8dtd3.westeurope-01.azurewebsites.net",
+      "url": "https://api.staging.oplog.one",
       "description": "Staging Server"
     }
   ],
