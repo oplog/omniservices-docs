@@ -21,7 +21,7 @@
         "tags": [
           "CargoCarriers"
         ],
-        "summary": "Cargo carriers used by OPLOG.ONE Open API.",
+        "summary": "Query Cargo Carriers.",
         "parameters": [
           {
             "name": "X-Tenant-Id",
