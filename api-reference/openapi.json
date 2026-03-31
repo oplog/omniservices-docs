@@ -2770,7 +2770,13 @@
             "type": "string"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "required": [
+          "email",
+          "firstName",
+          "lastName",
+          "phone"
+        ]
       },
       "UpdateCustomerRequestDTO": {
         "type": "object",
@@ -3494,7 +3500,22 @@
             "type": "string"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "required": [
+          "addressFirstName",
+          "addressLastName",
+          "addressOne",
+          "addressPhone",
+          "city",
+          "country",
+          "district",
+          "email",
+          "externalCustomerId",
+          "firstName",
+          "lastName",
+          "phone",
+          "postalCode"
+        ]
       },
       "UploadFileOutputDTO": {
         "type": "object",
@@ -5169,6 +5190,9 @@
       },
       "CreateProductRequestDTO": {
         "required": [
+          "barcodes",
+          "name",
+          "sku",
           "type"
         ],
         "type": "object",
@@ -5371,6 +5395,7 @@
       },
       "UpdateProductRequestDTO": {
         "required": [
+          "name",
           "type"
         ],
         "type": "object",
@@ -5454,6 +5479,8 @@
       },
       "UpdateProductRequestWithSkuDTO": {
         "required": [
+          "name",
+          "sku",
           "type"
         ],
         "type": "object",
@@ -5517,7 +5544,11 @@
             "type": "string"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "required": [
+          "sku",
+          "tag"
+        ]
       },
       "GetInventoryExpirationDatesQueryOutputDTO": {
         "type": "object",
@@ -10759,7 +10790,10 @@
             "type": "string"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "required": [
+          "shipmentDate"
+        ]
       },
       "PickupTransferDTO": {
         "type": "object",
@@ -10772,7 +10806,10 @@
             "type": "string"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "required": [
+          "pickupDate"
+        ]
       },
       "CarriageTransferDTO": {
         "type": "object",
@@ -10788,11 +10825,15 @@
             "type": "string"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "required": [
+          "shipmentDate"
+        ]
       },
       "CreateReceivingOrderRequestDTO": {
         "required": [
-          "lineItems"
+          "lineItems",
+          "transferType"
         ],
         "type": "object",
         "properties": {
@@ -11011,7 +11052,11 @@
             "type": "string"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "required": [
+          "referenceNumber",
+          "tag"
+        ]
       },
       "ReceivingOrderQueryOutputDTO": {
         "required": [
@@ -13154,6 +13199,7 @@
           "billingAddress",
           "customer",
           "lineItems",
+          "referenceNumber",
           "shippingAddress"
         ],
         "type": "object",
@@ -13346,7 +13392,11 @@
             "type": "string"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "required": [
+          "referenceNumber",
+          "tag"
+        ]
       },
       "UpdateSalesOrderInvoiceUrlAndAsnCommand": {
         "type": "object",
@@ -13382,7 +13432,11 @@
             "type": "string"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "required": [
+          "invoiceUrl",
+          "packageReferenceNumber"
+        ]
       },
       "CancelLineItemsRequestDTO": {
         "required": [
@@ -15111,7 +15165,11 @@
             "type": "string"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "required": [
+          "tag",
+          "transactionNumber"
+        ]
       },
       "StockQueryResponseDTO": {
         "type": "object",
