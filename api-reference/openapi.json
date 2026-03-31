@@ -5,7 +5,6 @@
     "version": "v1"
   },
   "servers": [
-
     {
       "url": "https://api.oplog.one",
       "description": "Production Server"
@@ -2536,10 +2535,6 @@
   "components": {
     "schemas": {
       "CargoCarriersOpenApiDTO": {
-        "required": [
-          "key",
-          "value"
-        ],
         "type": "object",
         "properties": {
           "key": {
@@ -2552,10 +2547,6 @@
         "additionalProperties": false
       },
       "CargoCarriersApiDTO": {
-        "required": [
-          "key",
-          "value"
-        ],
         "type": "object",
         "properties": {
           "key": {
@@ -2599,8 +2590,7 @@
         "required": [
           "caseSensitive",
           "logicalOperator",
-          "operator",
-          "propertyName"
+          "operator"
         ],
         "type": "object",
         "properties": {
@@ -2633,7 +2623,6 @@
       "SortOption": {
         "required": [
           "caseSensitive",
-          "propertyName",
           "sortingDirection"
         ],
         "type": "object",
@@ -2766,12 +2755,6 @@
         "additionalProperties": false
       },
       "CreateCustomerRequestDTO": {
-        "required": [
-          "email",
-          "firstName",
-          "lastName",
-          "phone"
-        ],
         "type": "object",
         "properties": {
           "email": {
@@ -2805,18 +2788,6 @@
         "additionalProperties": false
       },
       "UpdateAddressRequestDTO": {
-        "required": [
-          "addressFirstName",
-          "addressLastName",
-          "addressOne",
-          "addressPhone",
-          "addressTwo",
-          "city",
-          "company",
-          "country",
-          "district",
-          "postalCode"
-        ],
         "type": "object",
         "properties": {
           "addressFirstName": {
@@ -2853,20 +2824,6 @@
         "additionalProperties": false
       },
       "CreateAddressRequestDTO": {
-        "required": [
-          "addressFirstName",
-          "addressLastName",
-          "addressOne",
-          "addressPhone",
-          "addressTwo",
-          "city",
-          "company",
-          "country",
-          "district",
-          "postalCode",
-          "taxNumber",
-          "taxOffice"
-        ],
         "type": "object",
         "properties": {
           "addressFirstName": {
@@ -2909,22 +2866,6 @@
         "additionalProperties": false
       },
       "CreateCustomerCommand": {
-        "required": [
-          "addressFirstName",
-          "addressLastName",
-          "addressOne",
-          "addressPhone",
-          "addressTwo",
-          "city",
-          "company",
-          "country",
-          "district",
-          "email",
-          "firstName",
-          "lastName",
-          "phone",
-          "postalCode"
-        ],
         "type": "object",
         "properties": {
           "email": {
@@ -2975,9 +2916,7 @@
       "CreatedCustomerOutputDTO": {
         "required": [
           "customerNo",
-          "firstName",
-          "id",
-          "lastName"
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -3000,10 +2939,7 @@
       },
       "UpdateCustomerInfoCommand": {
         "required": [
-          "customerNo",
-          "firstName",
-          "lastName",
-          "phone"
+          "customerNo"
         ],
         "type": "object",
         "properties": {
@@ -3025,17 +2961,7 @@
       },
       "AddAddressToCustomerCommand": {
         "required": [
-          "addressFirstName",
-          "addressLastName",
-          "addressOne",
-          "addressPhone",
-          "addressTwo",
-          "city",
-          "company",
-          "country",
-          "customerNo",
-          "district",
-          "postalCode"
+          "customerNo"
         ],
         "type": "object",
         "properties": {
@@ -3078,18 +3004,8 @@
       },
       "UpdateAddressOfCustomerCommand": {
         "required": [
-          "addressFirstName",
-          "addressLastName",
           "addressNo",
-          "addressOne",
-          "addressPhone",
-          "addressTwo",
-          "city",
-          "company",
-          "country",
-          "customerNo",
-          "district",
-          "postalCode"
+          "customerNo"
         ],
         "type": "object",
         "properties": {
@@ -3136,12 +3052,7 @@
       },
       "SearchCustomersQueryOutputDTO": {
         "required": [
-          "address",
-          "customerNo",
-          "email",
-          "firstName",
-          "lastName",
-          "phone"
+          "customerNo"
         ],
         "type": "object",
         "properties": {
@@ -3170,11 +3081,7 @@
       "CustomerInfoOutputDTO": {
         "required": [
           "customerNo",
-          "email",
-          "firstName",
-          "id",
-          "lastName",
-          "phone"
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -3203,15 +3110,8 @@
       },
       "AddressOfCustomerOutputDTO": {
         "required": [
-          "addressFirstName",
-          "addressLastName",
           "addressNo",
-          "addressOne",
-          "city",
-          "country",
-          "district",
-          "id",
-          "postalCode"
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -3261,11 +3161,7 @@
       },
       "AddressOfCustomerQueryOutputDTO": {
         "required": [
-          "address",
-          "addressFullName",
-          "company",
-          "createdAt",
-          "phone"
+          "createdAt"
         ],
         "type": "object",
         "properties": {
@@ -3310,10 +3206,7 @@
       "CustomerDetailOutputDTO": {
         "required": [
           "createdAt",
-          "customerNo",
-          "email",
-          "fullName",
-          "phone"
+          "customerNo"
         ],
         "type": "object",
         "properties": {
@@ -3342,11 +3235,7 @@
           "addressCount",
           "createdAt",
           "customerNo",
-          "email",
-          "fullName",
           "id",
-          "lastShippingAddress",
-          "phone",
           "salesOrderCount"
         ],
         "type": "object",
@@ -3422,8 +3311,6 @@
           "id",
           "lastCompletedState",
           "orderCreatedAt",
-          "referenceNumber",
-          "shippingAddress",
           "state",
           "totalProductCount",
           "uniqueProductCount"
@@ -3493,8 +3380,6 @@
           "barcodes",
           "favorite",
           "id",
-          "imageUrl",
-          "productCategory",
           "productName",
           "productType",
           "sku",
@@ -3561,23 +3446,6 @@
         "additionalProperties": false
       },
       "UpsertCustomerWithExternalIdCommandDTO": {
-        "required": [
-          "addressFirstName",
-          "addressLastName",
-          "addressOne",
-          "addressPhone",
-          "addressTwo",
-          "city",
-          "company",
-          "country",
-          "district",
-          "email",
-          "externalCustomerId",
-          "firstName",
-          "lastName",
-          "phone",
-          "postalCode"
-        ],
         "type": "object",
         "properties": {
           "externalCustomerId": {
@@ -3629,9 +3497,6 @@
         "additionalProperties": false
       },
       "UploadFileOutputDTO": {
-        "required": [
-          "url"
-        ],
         "type": "object",
         "properties": {
           "url": {
@@ -3671,10 +3536,6 @@
         "type": "string"
       },
       "ECommerceCargoCompany": {
-        "required": [
-          "name",
-          "referenceCode"
-        ],
         "type": "object",
         "properties": {
           "referenceCode": {
@@ -3687,10 +3548,6 @@
         "additionalProperties": false
       },
       "ECommerceSalesOrderStatuses": {
-        "required": [
-          "name",
-          "referenceCode"
-        ],
         "type": "object",
         "properties": {
           "referenceCode": {
@@ -3800,13 +3657,11 @@
           "editable",
           "id",
           "isTestEnvironment",
-          "name",
           "openApiIdentifier",
           "productCount",
           "salesOrderCount",
           "state",
           "syncable",
-          "tenantSecret",
           "type"
         ],
         "type": "object",
@@ -3953,7 +3808,6 @@
       },
       "CreateIntegrationCommand": {
         "required": [
-          "integrationName",
           "type"
         ],
         "type": "object",
@@ -4070,11 +3924,6 @@
         "additionalProperties": false
       },
       "CreatedOpenApiIntegrationCredentialsOutputDTO": {
-        "required": [
-          "clientId",
-          "clientSecret",
-          "tenantId"
-        ],
         "type": "object",
         "properties": {
           "clientId": {
@@ -4108,7 +3957,6 @@
       "UpdateIntegrationCommand": {
         "required": [
           "id",
-          "integrationName",
           "isActive",
           "openApiIdentifier",
           "shouldSyncMissingData",
@@ -4265,26 +4113,7 @@
       },
       "CreateFtpIntegrationCommand": {
         "required": [
-          "barcodeKey",
-          "categoryKey",
-          "createdAtKey",
-          "fileFormat",
-          "filePrefix",
-          "ftpAddress",
-          "ftpPassword",
-          "ftpPort",
-          "ftpUsername",
-          "imageUrlKey",
-          "name",
-          "priceKey",
-          "salePriceKey",
-          "searchDestination",
-          "skuKey",
-          "subBarcodesKey",
-          "taxRatioKey",
-          "tenantName",
-          "titleKey",
-          "updatedAtKey"
+          "ftpPort"
         ],
         "type": "object",
         "properties": {
@@ -4354,8 +4183,7 @@
       },
       "IntegrationsOfTenantOutputDTO": {
         "required": [
-          "id",
-          "name"
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -4371,12 +4199,9 @@
       },
       "IntegrationsOfTenantQueryOutputDTO": {
         "required": [
-          "cashKey",
-          "creditCardKey",
           "id",
           "invalidSalesOrderCount",
           "isCoDActive",
-          "name",
           "productCount",
           "receivingOrderCount",
           "salesOrderCount",
@@ -4521,9 +4346,7 @@
           "processedAt",
           "receivedItemAmount",
           "reservedAmount",
-          "sku",
-          "stockAmount",
-          "tenantName"
+          "stockAmount"
         ],
         "type": "object",
         "properties": {
@@ -4592,11 +4415,7 @@
       },
       "InventoryItemQueryOutputDTO": {
         "required": [
-          "category",
-          "imageUrl",
-          "name",
           "openApiIdentifier",
-          "sku",
           "type"
         ],
         "type": "object",
@@ -4686,9 +4505,7 @@
       },
       "InventoryMissingQueryOutputDTO": {
         "required": [
-          "missingAmount",
-          "name",
-          "sku"
+          "missingAmount"
         ],
         "type": "object",
         "properties": {
@@ -4741,10 +4558,7 @@
         "required": [
           "amount",
           "expirationDate",
-          "imageUrl",
-          "inventoryItemType",
-          "name",
-          "sku"
+          "inventoryItemType"
         ],
         "type": "object",
         "properties": {
@@ -4798,11 +4612,7 @@
       },
       "InventorySerialNumbersQueryOutputDTO": {
         "required": [
-          "imageUrl",
-          "inventoryItemType",
-          "name",
-          "serialNumber",
-          "sku"
+          "inventoryItemType"
         ],
         "type": "object",
         "properties": {
@@ -4884,7 +4694,6 @@
           "lastCompletedState",
           "packageFulfillmentSyncRetryCount",
           "packageFulfillmentSyncState",
-          "referenceNumber",
           "salesOrderId",
           "state",
           "wmsSyncRetryCount",
@@ -4986,11 +4795,6 @@
         "additionalProperties": false
       },
       "ReferenceNumberOutputDTO": {
-        "required": [
-          "errorCode",
-          "exceptionMessage",
-          "referenceNumber"
-        ],
         "type": "object",
         "properties": {
           "referenceNumber": {
@@ -5048,9 +4852,6 @@
         "additionalProperties": false
       },
       "IntegrationDetailResponseDTO": {
-        "required": [
-          "integrationName"
-        ],
         "type": "object",
         "properties": {
           "integrationType": {
@@ -5063,16 +4864,6 @@
         "additionalProperties": false
       },
       "ProductDetailResponseDTO": {
-        "required": [
-          "createdAt",
-          "favorite",
-          "id",
-          "name",
-          "sioc",
-          "sku",
-          "state",
-          "type"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -5378,12 +5169,6 @@
       },
       "CreateProductRequestDTO": {
         "required": [
-          "category",
-          "imageUrl",
-          "name",
-          "salesUrl",
-          "sku",
-          "tag",
           "type"
         ],
         "type": "object",
@@ -5460,21 +5245,6 @@
         "additionalProperties": false
       },
       "ProductDetailWithTagResponseDTO": {
-        "required": [
-          "category",
-          "createdAt",
-          "favorite",
-          "id",
-          "imageUrl",
-          "name",
-          "sioc",
-          "sku",
-          "state",
-          "tag",
-          "type",
-          "unitOfDimension",
-          "unitOfWeight"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -5601,11 +5371,6 @@
       },
       "UpdateProductRequestDTO": {
         "required": [
-          "category",
-          "imageUrl",
-          "name",
-          "salesUrl",
-          "tag",
           "type"
         ],
         "type": "object",
@@ -5679,9 +5444,6 @@
         "additionalProperties": false
       },
       "GetProductBySkuWithBodyDTO": {
-        "required": [
-          "sku"
-        ],
         "type": "object",
         "properties": {
           "sku": {
@@ -5692,12 +5454,6 @@
       },
       "UpdateProductRequestWithSkuDTO": {
         "required": [
-          "category",
-          "imageUrl",
-          "name",
-          "salesUrl",
-          "sku",
-          "tag",
           "type"
         ],
         "type": "object",
@@ -5752,10 +5508,6 @@
         "additionalProperties": false
       },
       "UpdateProductTagRequestDTO": {
-        "required": [
-          "sku",
-          "tag"
-        ],
         "type": "object",
         "properties": {
           "sku": {
@@ -5768,14 +5520,6 @@
         "additionalProperties": false
       },
       "GetInventoryExpirationDatesQueryOutputDTO": {
-        "required": [
-          "amount",
-          "expirationDate",
-          "imageUrl",
-          "inventoryItemType",
-          "name",
-          "sku"
-        ],
         "type": "object",
         "properties": {
           "sku": {
@@ -5855,14 +5599,10 @@
       },
       "ProductQueryOutputDTO": {
         "required": [
-          "category",
           "createdAt",
           "favorite",
           "id",
-          "imageUrl",
-          "name",
           "openApiIdentifier",
-          "sku",
           "state",
           "type"
         ],
@@ -5977,7 +5717,6 @@
           "createdAt",
           "id",
           "lastCompletedState",
-          "referenceNumber",
           "state",
           "transferType"
         ],
@@ -6036,8 +5775,6 @@
           "id",
           "lastCompletedState",
           "orderCreatedAt",
-          "referenceNumber",
-          "shippingAddressFullName",
           "state"
         ],
         "type": "object",
@@ -6095,10 +5832,7 @@
       "CustomerOfProductQueryOutputDTO": {
         "required": [
           "createdAt",
-          "customerEmail",
-          "customerFullName",
           "customerNo",
-          "customerPhone",
           "salesOrderCount",
           "salesOrderLineItemCount"
         ],
@@ -6154,19 +5888,14 @@
       "ProductDetailOutputDTO": {
         "required": [
           "barcodes",
-          "category",
           "createdAt",
           "id",
-          "imageUrl",
           "name",
           "openApiIdentifier",
-          "salesUrl",
           "sioc",
           "sku",
           "state",
-          "type",
-          "unitOfDimension",
-          "unitOfWeight"
+          "type"
         ],
         "type": "object",
         "properties": {
@@ -6308,8 +6037,7 @@
       },
       "UpdateProductFavoriteCommand": {
         "required": [
-          "favorite",
-          "sku"
+          "favorite"
         ],
         "type": "object",
         "properties": {
@@ -6324,7 +6052,6 @@
       },
       "UpdateProductStateCommand": {
         "required": [
-          "sku",
           "state"
         ],
         "type": "object",
@@ -6362,10 +6089,6 @@
       },
       "CreateProductCommand": {
         "required": [
-          "category",
-          "imageUrl",
-          "name",
-          "sku",
           "type"
         ],
         "type": "object",
@@ -6426,10 +6149,6 @@
       },
       "UpdateProductCommand": {
         "required": [
-          "category",
-          "imageUrl",
-          "name",
-          "sku",
           "type"
         ],
         "type": "object",
@@ -6502,26 +6221,16 @@
           "CurrencyShouldExist",
           "PriceOrSalesPriceIsEmpty",
           "BarcodeCantBeChanged",
-          "MissingBarcodeInUpdate",
-          "IntegrationIdCantChange",
-          "BarcodeUsedByMultProductsInReq",
-          "DuplicationInAProductBarcodeInReq",
-          "MissingDimensions",
           "DimesionValuesNotValid"
         ],
         "type": "string"
       },
       "InvalidProductQueryOutputDTO": {
         "required": [
-          "barcodes",
           "createdAt",
           "error",
-          "errorMessage",
           "id",
-          "integrationName",
-          "name",
-          "openApiIdentifier",
-          "sku"
+          "openApiIdentifier"
         ],
         "type": "object",
         "properties": {
@@ -6616,7 +6325,6 @@
           "CargoCarrierNotFound",
           "InvalidSalesOrderReferenceNumber",
           "InvalidReceivingOrderReferenceNumber",
-          "MissingInformation",
           "InternationalCustomsProductPriceError",
           "ProductSkuAlreadyExists",
           "EmptyReceivingOrderShipmentDate",
@@ -6624,7 +6332,6 @@
           "TenantNameEmpty",
           "ReceivingOrderReferenceNumberEmpty",
           "ReceivingOrderExpectedDeliveryDateEmpty",
-          "ReceivingOrderArrivalStateEmpty",
           "CargoDocumentURLAndCargoCodeShouldBeEmptyWhenCargoTypeIsSameDayDelivery",
           "InvalidCountry",
           "InvalidCity",
@@ -6649,16 +6356,16 @@
           "TenantAlreadyHasStaticToken",
           "IntegrationDoesNotSupportStaticToken",
           "ReceivingOrderTransferTypeTransferDetailsMismatch",
-          "AddressFirstNameMaxLenght",
-          "AddressLastNameMaxLenght",
-          "AddressPhoneMaxLenght",
-          "AddressEmailMaxLenght",
-          "AddressOneMaxLenght",
-          "AddressTwoMaxLenght",
-          "AddressDistrictMaxLenght",
-          "AddressPostalCodeMaxLenght",
-          "AddressCityMaxLenght",
-          "AddressCountryMaxLenght",
+          "AddressFirstNameMaxLength",
+          "AddressLastNameMaxLength",
+          "AddressPhoneMaxLength",
+          "AddressEmailMaxLength",
+          "AddressOneMaxLength",
+          "AddressTwoMaxLength",
+          "AddressDistrictMaxLength",
+          "AddressPostalCodeMaxLength",
+          "AddressCityMaxLength",
+          "AddressCountryMaxLength",
           "InvalidCodReceiptTotalAmount",
           "MarketplaceNoCoD",
           "InvalidCargoDocumentUrlForExcel",
@@ -6671,16 +6378,8 @@
       },
       "CreateProductInputDTO": {
         "required": [
-          "category",
-          "imageUrl",
-          "integrationInventoryItemId",
-          "name",
-          "salesUrl",
           "sioc",
-          "sku",
-          "tag",
-          "type",
-          "uniqueId"
+          "type"
         ],
         "type": "object",
         "properties": {
@@ -6905,17 +6604,13 @@
       "InventoryItemExpirationDate": {
         "required": [
           "createdAt",
-          "createdBy",
-          "deletedBy",
           "expirationDate",
           "id",
           "inventoryItemId",
           "inventoryItemType",
           "productId",
           "quantity",
-          "sku",
-          "tenantId",
-          "updatedBy"
+          "tenantId"
         ],
         "type": "object",
         "properties": {
@@ -6993,16 +6688,12 @@
       "ReceivingOrderLineItemExpirationDate": {
         "required": [
           "createdAt",
-          "createdBy",
-          "deletedBy",
           "expirationDate",
           "id",
           "productId",
           "quantity",
           "receivingOrderLineItemId",
-          "sku",
-          "tenantId",
-          "updatedBy"
+          "tenantId"
         ],
         "type": "object",
         "properties": {
@@ -7077,18 +6768,13 @@
       "ReceivingOrderLineItem": {
         "required": [
           "createdAt",
-          "createdBy",
-          "deletedBy",
           "expectedQuantity",
           "id",
           "isUnexpected",
           "processedAt",
           "productId",
           "receivingOrderId",
-          "serialNumbers",
-          "sku",
-          "tenantId",
-          "updatedBy"
+          "tenantId"
         ],
         "type": "object",
         "properties": {
@@ -7192,7 +6878,6 @@
       },
       "StringInt32Tuple": {
         "required": [
-          "item1",
           "item2"
         ],
         "type": "object",
@@ -7212,10 +6897,7 @@
       "BaseTransfer": {
         "required": [
           "createdAt",
-          "createdBy",
-          "deletedBy",
-          "id",
-          "updatedBy"
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -7267,14 +6949,9 @@
       "IntegrationConfiguration": {
         "required": [
           "createdAt",
-          "createdBy",
-          "deletedBy",
           "id",
           "integrationId",
-          "key",
-          "tenantId",
-          "updatedBy",
-          "value"
+          "tenantId"
         ],
         "type": "object",
         "properties": {
@@ -7332,14 +7009,6 @@
         "additionalProperties": false
       },
       "BaseAddress": {
-        "required": [
-          "addressOne",
-          "addressTwo",
-          "city",
-          "country",
-          "district",
-          "postalCode"
-        ],
         "type": "object",
         "properties": {
           "addressOne": {
@@ -7371,22 +7040,10 @@
       },
       "CustomerAddress": {
         "required": [
-          "company",
           "createdAt",
-          "createdBy",
           "customerId",
-          "deletedBy",
-          "fingerprint",
-          "firstName",
-          "fullAddress",
-          "fullName",
           "id",
-          "lastName",
-          "phone",
-          "referenceNumber",
-          "taxNumber",
-          "taxOffice",
-          "updatedBy"
+          "referenceNumber"
         ],
         "type": "object",
         "properties": {
@@ -7485,18 +7142,9 @@
       "Customer": {
         "required": [
           "createdAt",
-          "createdBy",
-          "deletedBy",
-          "email",
-          "externalCustomerId",
-          "firstName",
-          "fullName",
           "id",
-          "lastName",
-          "phone",
           "referenceNumber",
-          "tenantId",
-          "updatedBy"
+          "tenantId"
         ],
         "type": "object",
         "properties": {
@@ -7593,20 +7241,9 @@
       },
       "SalesOrderAddress": {
         "required": [
-          "company",
           "createdAt",
-          "createdBy",
-          "deletedBy",
-          "firstName",
-          "fullAddress",
-          "fullName",
           "id",
-          "lastName",
-          "phone",
-          "referenceNumber",
-          "taxNumber",
-          "taxOffice",
-          "updatedBy"
+          "referenceNumber"
         ],
         "type": "object",
         "properties": {
@@ -7687,20 +7324,9 @@
       },
       "PackageAddress": {
         "required": [
-          "company",
           "createdAt",
-          "createdBy",
-          "deletedBy",
-          "firstName",
-          "fullAddress",
-          "fullName",
           "id",
-          "lastName",
-          "phone",
-          "referenceNumber",
-          "taxNumber",
-          "taxOffice",
-          "updatedBy"
+          "referenceNumber"
         ],
         "type": "object",
         "properties": {
@@ -7818,13 +7444,7 @@
       },
       "PackageCargo": {
         "required": [
-          "cargoCode",
-          "cargoDocumentUrl",
-          "cargoType",
-          "shipmentTrackingLinkUrl",
-          "shippingCompany",
-          "shippingState",
-          "shippingTrackingId"
+          "cargoType"
         ],
         "type": "object",
         "properties": {
@@ -7867,7 +7487,6 @@
       },
       "SalesOrderGiftVAS": {
         "required": [
-          "giftNotes",
           "giftWrap"
         ],
         "type": "object",
@@ -7884,9 +7503,6 @@
         "additionalProperties": false
       },
       "SalesOrderDocumentVAS": {
-        "required": [
-          "documentUrl"
-        ],
         "type": "object",
         "properties": {
           "documentUrl": {
@@ -7897,9 +7513,6 @@
         "additionalProperties": false
       },
       "PackageVAS": {
-        "required": [
-          "packageNote"
-        ],
         "type": "object",
         "properties": {
           "packageNote": {
@@ -7918,15 +7531,10 @@
       "PackageSerialNumber": {
         "required": [
           "createdAt",
-          "createdBy",
-          "deletedBy",
           "id",
           "packageId",
           "productId",
-          "serialNumbers",
-          "sku",
-          "tenantId",
-          "updatedBy"
+          "tenantId"
         ],
         "type": "object",
         "properties": {
@@ -7992,21 +7600,15 @@
       },
       "Package": {
         "required": [
-          "asn",
           "createdAt",
-          "createdBy",
-          "deletedBy",
-          "externalCode",
           "id",
-          "invoiceURL",
           "packageFulfillmentSyncRetryCount",
           "packageFulfillmentSyncState",
-          "referenceNumber",
           "salesOrderId",
           "state",
           "tenantId",
           "totalCargoPackageCount",
-          "updatedBy",
+          "totalCargoPackageDeci",
           "wmsSyncRetryCount",
           "wmsSyncState"
         ],
@@ -8173,16 +7775,11 @@
       "SalesOrderLineItem": {
         "required": [
           "createdAt",
-          "createdBy",
-          "deletedBy",
-          "externalCode",
           "id",
           "productId",
           "salesOrderId",
-          "sku",
           "state",
-          "tenantId",
-          "updatedBy"
+          "tenantId"
         ],
         "type": "object",
         "properties": {
@@ -8315,17 +7912,11 @@
       "ReturnLineItem": {
         "required": [
           "createdAt",
-          "createdBy",
-          "deletedBy",
           "id",
           "productId",
-          "referenceNumber",
           "returnId",
-          "serialNumber",
-          "sku",
           "state",
-          "tenantId",
-          "updatedBy"
+          "tenantId"
         ],
         "type": "object",
         "properties": {
@@ -8440,22 +8031,14 @@
       },
       "Return": {
         "required": [
-          "cargoCarrier",
           "courierRequest",
           "createdAt",
-          "createdBy",
-          "deletedBy",
           "id",
-          "notes",
-          "referenceNumber",
           "returnIntegrationSyncRetryCount",
           "returnIntegrationSyncState",
           "source",
           "state",
-          "tag",
           "tenantId",
-          "trackingId",
-          "updatedBy",
           "wmsSyncRetryCount",
           "wmsSyncState"
         ],
@@ -8599,9 +8182,6 @@
         "additionalProperties": false
       },
       "SalesOrderVAS": {
-        "required": [
-          "packageNote"
-        ],
         "type": "object",
         "properties": {
           "packageNote": {
@@ -8627,14 +8207,10 @@
       "SalesOrderVasItem": {
         "required": [
           "createdAt",
-          "createdBy",
-          "deletedBy",
-          "documentURL",
           "id",
           "salesOrderId",
           "tenantId",
-          "type",
-          "updatedBy"
+          "type"
         ],
         "type": "object",
         "properties": {
@@ -8695,13 +8271,9 @@
       "SalesOrderCargoDocumentItem": {
         "required": [
           "createdAt",
-          "createdBy",
-          "deletedBy",
-          "documentURL",
           "id",
           "salesOrderId",
-          "tenantId",
-          "updatedBy"
+          "tenantId"
         ],
         "type": "object",
         "properties": {
@@ -8758,13 +8330,7 @@
       },
       "SalesOrderCargo": {
         "required": [
-          "cargoCode",
-          "cargoDocumentUrl",
-          "cargoType",
-          "shipmentTrackingLinkUrl",
-          "shippingCompany",
-          "shippingState",
-          "shippingTrackingId"
+          "cargoType"
         ],
         "type": "object",
         "properties": {
@@ -8811,15 +8377,11 @@
       "InventoryReservation": {
         "required": [
           "createdAt",
-          "createdBy",
-          "deletedBy",
           "id",
           "productId",
           "quantity",
           "salesOrderId",
-          "sku",
-          "tenantId",
-          "updatedBy"
+          "tenantId"
         ],
         "type": "object",
         "properties": {
@@ -8911,23 +8473,15 @@
         "required": [
           "approved",
           "createdAt",
-          "createdBy",
           "customerId",
-          "deletedBy",
-          "externalCode",
           "id",
           "lastCompletedState",
           "orderCreatedAt",
-          "orderId",
           "pending",
-          "referenceNumber",
-          "salesChannel",
           "salesOrderFulfillmentSyncRetryCount",
           "salesOrderFulfillmentSyncState",
           "state",
-          "tag",
           "tenantId",
-          "updatedBy",
           "warehouseType",
           "wmsSyncRetryCount",
           "wmsSyncState"
@@ -9139,12 +8693,6 @@
         "additionalProperties": false
       },
       "InvalidSalesOrderCustomer": {
-        "required": [
-          "email",
-          "firstName",
-          "lastName",
-          "phone"
-        ],
         "type": "object",
         "properties": {
           "firstName": {
@@ -9167,17 +8715,6 @@
         "additionalProperties": false
       },
       "InvalidSalesOrderShippingAddress": {
-        "required": [
-          "addressOne",
-          "addressTwo",
-          "city",
-          "country",
-          "district",
-          "firstName",
-          "lastName",
-          "phone",
-          "postalCode"
-        ],
         "type": "object",
         "properties": {
           "firstName": {
@@ -9222,14 +8759,9 @@
       "InvalidSalesOrderLineItem": {
         "required": [
           "amountInOrder",
-          "barcode",
           "createdAt",
-          "createdBy",
-          "deletedBy",
           "id",
-          "invalidSalesOrderId",
-          "sku",
-          "updatedBy"
+          "invalidSalesOrderId"
         ],
         "type": "object",
         "properties": {
@@ -9316,9 +8848,6 @@
         "additionalProperties": false
       },
       "InvalidSalesOrderPayment": {
-        "required": [
-          "paymentGatewayNames"
-        ],
         "type": "object",
         "properties": {
           "totalPaymentAmount": {
@@ -9342,10 +8871,7 @@
       },
       "InvalidSalesOrderCargo": {
         "required": [
-          "cargoCode",
-          "cargoDocumentUrl",
-          "cargoType",
-          "requestedCargoCarrier"
+          "cargoType"
         ],
         "type": "object",
         "properties": {
@@ -9369,7 +8895,6 @@
       },
       "InvalidSalesOrderGiftVAS": {
         "required": [
-          "giftNotes",
           "giftWrap"
         ],
         "type": "object",
@@ -9386,9 +8911,6 @@
         "additionalProperties": false
       },
       "InvalidSalesOrderDocumentVAS": {
-        "required": [
-          "documentUrl"
-        ],
         "type": "object",
         "properties": {
           "documentUrl": {
@@ -9399,9 +8921,6 @@
         "additionalProperties": false
       },
       "InvalidSalesOrderVAS": {
-        "required": [
-          "packageNote"
-        ],
         "type": "object",
         "properties": {
           "packageNote": {
@@ -9419,17 +8938,10 @@
       "InvalidSalesOrder": {
         "required": [
           "createdAt",
-          "createdBy",
-          "deletedBy",
           "error",
           "id",
           "orderCreatedAt",
-          "orderId",
-          "referenceNumber",
-          "salesChannel",
-          "shippingAddressFullName",
-          "tenantId",
-          "updatedBy"
+          "tenantId"
         ],
         "type": "object",
         "properties": {
@@ -9530,26 +9042,17 @@
       },
       "Integration": {
         "required": [
-          "cashKey",
           "createdAt",
-          "createdBy",
-          "creditCardKey",
-          "deletedBy",
           "fulfillmentNotificationIsEnabled",
           "id",
           "inventoryNotificationIsEnabled",
           "isCoDActive",
           "isSameDeliveryActive",
-          "name",
-          "payload",
           "productCatalogSyncIsEnabled",
-          "referenceNumberPrefix",
           "salesOrdersSyncIsEnabled",
-          "sameDayDeliveryKey",
           "state",
           "tenantId",
-          "type",
-          "updatedBy"
+          "type"
         ],
         "type": "object",
         "properties": {
@@ -9711,18 +9214,14 @@
         "required": [
           "arrivalState",
           "createdAt",
-          "createdBy",
-          "deletedBy",
-          "externalCode",
           "id",
+          "madSyncRetryCount",
+          "madSyncState",
           "processedAt",
-          "referenceNumber",
           "sendEmail",
           "state",
-          "tag",
           "tenantId",
           "transferType",
-          "updatedBy",
           "wmsSyncRetryCount",
           "wmsSyncState"
         ],
@@ -9856,13 +9355,8 @@
       "TenantConfiguration": {
         "required": [
           "createdAt",
-          "createdBy",
-          "deletedBy",
           "id",
-          "key",
-          "tenantId",
-          "updatedBy",
-          "value"
+          "tenantId"
         ],
         "type": "object",
         "properties": {
@@ -9927,11 +9421,8 @@
         "required": [
           "authType",
           "createdAt",
-          "createdBy",
-          "deletedBy",
           "id",
           "tenantId",
-          "updatedBy",
           "webHookId"
         ],
         "type": "object",
@@ -10013,18 +9504,11 @@
       },
       "WebHook": {
         "required": [
-          "bodyTemplate",
           "createdAt",
-          "createdBy",
-          "deletedBy",
-          "headerTemplate",
           "hookType",
-          "httpMethod",
           "id",
           "status",
-          "tenantId",
-          "updatedBy",
-          "url"
+          "tenantId"
         ],
         "type": "object",
         "properties": {
@@ -10097,13 +9581,6 @@
         "additionalProperties": false
       },
       "Company": {
-        "required": [
-          "address",
-          "phone",
-          "taxAdministration",
-          "taxNo",
-          "title"
-        ],
         "type": "object",
         "properties": {
           "title": {
@@ -10132,18 +9609,11 @@
       "Tenant": {
         "required": [
           "createdAt",
-          "createdBy",
-          "customerCode",
-          "deletedBy",
           "doesNeedOrderApproval",
           "id",
+          "isAvailableStockCalculated",
           "isEnableFunctions",
-          "name",
           "optionalPackageWithASN",
-          "staticToken",
-          "updatedBy",
-          "warehouseCode",
-          "warehouseLocation",
           "warehouseType"
         ],
         "type": "object",
@@ -10332,7 +9802,10 @@
       },
       "WarehouseInventoryItem": {
         "required": [
-          "availableStockAmountChanged"
+          "availableStockAmountChanged",
+          "damagedItemAmountChanged",
+          "lostItemAmountChanged",
+          "receivedItemAmountChanged"
         ],
         "type": "object",
         "properties": {
@@ -10369,9 +9842,6 @@
         "additionalProperties": false
       },
       "Width": {
-        "required": [
-          "type"
-        ],
         "type": "object",
         "properties": {
           "type": {
@@ -10387,9 +9857,6 @@
         "additionalProperties": false
       },
       "Length": {
-        "required": [
-          "type"
-        ],
         "type": "object",
         "properties": {
           "type": {
@@ -10405,9 +9872,6 @@
         "additionalProperties": false
       },
       "Height": {
-        "required": [
-          "type"
-        ],
         "type": "object",
         "properties": {
           "type": {
@@ -10423,9 +9887,6 @@
         "additionalProperties": false
       },
       "Weight": {
-        "required": [
-          "type"
-        ],
         "type": "object",
         "properties": {
           "type": {
@@ -10451,14 +9912,10 @@
       "InventoryItem": {
         "required": [
           "createdAt",
-          "createdBy",
-          "deletedBy",
           "id",
           "productId",
-          "sku",
           "stockAmountChanged",
           "tenantId",
-          "updatedBy",
           "webHookSyncRetryCount",
           "webHookSyncState"
         ],
@@ -10574,14 +10031,9 @@
       },
       "ProductBarcode": {
         "required": [
-          "barcode",
           "createdAt",
-          "createdBy",
-          "deletedBy",
           "id",
-          "productId",
-          "sku",
-          "updatedBy"
+          "productId"
         ],
         "type": "object",
         "properties": {
@@ -10639,15 +10091,10 @@
       "ProductSerialNumber": {
         "required": [
           "createdAt",
-          "createdBy",
-          "deletedBy",
           "id",
           "inventoryItemType",
           "productId",
-          "serialNumbers",
-          "sku",
-          "tenantId",
-          "updatedBy"
+          "tenantId"
         ],
         "type": "object",
         "properties": {
@@ -10712,27 +10159,14 @@
       },
       "Product": {
         "required": [
-          "category",
           "createdAt",
-          "createdBy",
-          "deletedBy",
-          "externalCode",
           "favorite",
           "id",
-          "imageUrl",
-          "integrationInventoryItemId",
-          "name",
           "referenceNumber",
           "sioc",
-          "sku",
           "state",
-          "tag",
           "tenantId",
           "type",
-          "unitOfDimension",
-          "unitOfWeight",
-          "updatedBy",
-          "url",
           "wmsSyncRetryCount",
           "wmsSyncState"
         ],
@@ -11046,9 +10480,6 @@
         "additionalProperties": false
       },
       "SendProductsToWMSCommand": {
-        "required": [
-          "tenantName"
-        ],
         "type": "object",
         "properties": {
           "tenantName": {
@@ -11099,9 +10530,7 @@
       "MaestroReceivingOrderLineItemSyncDTO": {
         "required": [
           "acceptedAmount",
-          "damagedAmount",
-          "serialNumbers",
-          "sku"
+          "damagedAmount"
         ],
         "type": "object",
         "properties": {
@@ -11146,10 +10575,7 @@
         "required": [
           "arrivalState",
           "extendedState",
-          "gloheQueueName",
-          "operationName",
           "processedAt",
-          "referenceNumber",
           "state"
         ],
         "type": "object",
@@ -11576,10 +11002,6 @@
         "additionalProperties": false
       },
       "UpdateReceivingOrderTagRequestDTO": {
-        "required": [
-          "referenceNumber",
-          "tag"
-        ],
         "type": "object",
         "properties": {
           "referenceNumber": {
@@ -11603,7 +11025,6 @@
           "openApiIdentifier",
           "productCount",
           "productTypeCount",
-          "referenceNumber",
           "state",
           "transferType"
         ],
@@ -11691,11 +11112,8 @@
           "acceptedQuantityDifference",
           "expectedQuantity",
           "id",
-          "imageUrl",
           "isArrivedToWarehouse",
-          "isUnexpected",
-          "productName",
-          "sku"
+          "isUnexpected"
         ],
         "type": "object",
         "properties": {
@@ -11770,9 +11188,7 @@
         "required": [
           "expirationDate",
           "id",
-          "productName",
-          "quantity",
-          "sku"
+          "quantity"
         ],
         "type": "object",
         "properties": {
@@ -11823,11 +11239,6 @@
         "additionalProperties": false
       },
       "ReceivingOrderLineItemSerialNumbersQueryOutputDTO": {
-        "required": [
-          "name",
-          "serialNumber",
-          "sku"
-        ],
         "type": "object",
         "properties": {
           "sku": {
@@ -11925,7 +11336,6 @@
         "required": [
           "id",
           "openApiIdentifier",
-          "referenceNumber",
           "state",
           "transferType"
         ],
@@ -11990,9 +11400,6 @@
         "additionalProperties": false
       },
       "CreatedReceivingOrderOutputDTO": {
-        "required": [
-          "referenceNumber"
-        ],
         "type": "object",
         "properties": {
           "referenceNumber": {
@@ -12009,7 +11416,6 @@
       },
       "UpdateReceivingOrderTransferDetailCommand": {
         "required": [
-          "referenceNumber",
           "transferType"
         ],
         "type": "object",
@@ -12063,7 +11469,6 @@
           "createdAt",
           "id",
           "lastCompletedState",
-          "referenceNumber",
           "state",
           "transferType",
           "wmsSyncRetryCount",
@@ -12146,8 +11551,7 @@
       },
       "UpdateAcceptedAmoutReceivingOrderLineItems": {
         "required": [
-          "acceptedAmount",
-          "sku"
+          "acceptedAmount"
         ],
         "type": "object",
         "properties": {
@@ -12163,7 +11567,6 @@
       },
       "UpdateAcceptedAmountReceivingOrdersCommand": {
         "required": [
-          "referenceNumber",
           "tenantId"
         ],
         "type": "object",
@@ -12185,11 +11588,6 @@
         "additionalProperties": false
       },
       "MaestroReturnLineItem": {
-        "required": [
-          "returnLineReference",
-          "returnSerialNumber",
-          "sku"
-        ],
         "type": "object",
         "properties": {
           "returnLineReference": {
@@ -12217,14 +11615,8 @@
       },
       "FetchReturnsFromMaestroCommand": {
         "required": [
-          "cargoCarrier",
           "courierRequest",
-          "notes",
-          "returnReference",
-          "salesOrderReference",
-          "state",
-          "tenantName",
-          "trackingId"
+          "state"
         ],
         "type": "object",
         "properties": {
@@ -12526,11 +11918,7 @@
       },
       "ReturnQueryOutputDTO": {
         "required": [
-          "city",
           "courierRequest",
-          "referenceNumber",
-          "salesOrderChannel",
-          "salesOrderReferenceNumber",
           "source"
         ],
         "type": "object",
@@ -12607,8 +11995,6 @@
       },
       "ReturnDamagedProductsQueryOutputDTO": {
         "required": [
-          "name",
-          "sku",
           "waitingInWarehouseCount"
         ],
         "type": "object",
@@ -12647,9 +12033,6 @@
       },
       "LineItemOfReturnQueryOutputDTO": {
         "required": [
-          "name",
-          "serialNumber",
-          "sku",
           "state"
         ],
         "type": "object",
@@ -12700,11 +12083,7 @@
       },
       "SalesOrderDetailOfReturnOutputDTO": {
         "required": [
-          "customerFullName",
-          "orderCreatedAt",
-          "referenceNumber",
-          "shippingAddress",
-          "shippingAddressFullName"
+          "orderCreatedAt"
         ],
         "type": "object",
         "properties": {
@@ -12728,12 +12107,6 @@
         "additionalProperties": false
       },
       "ReturnSalesOrderOutputDTO": {
-        "required": [
-          "customerFullName",
-          "fullAddress",
-          "referenceNumber",
-          "shippingAddressFullName"
-        ],
         "type": "object",
         "properties": {
           "referenceNumber": {
@@ -12757,8 +12130,6 @@
       },
       "ReturnDetailOutputDTO": {
         "required": [
-          "notes",
-          "referenceNumber",
           "source",
           "state"
         ],
@@ -12869,9 +12240,6 @@
         "additionalProperties": false
       },
       "CreatedReturnOutputDTO": {
-        "required": [
-          "referenceNumber"
-        ],
         "type": "object",
         "properties": {
           "referenceNumber": {
@@ -12881,10 +12249,6 @@
         "additionalProperties": false
       },
       "SalesChannelsDTO": {
-        "required": [
-          "key",
-          "value"
-        ],
         "type": "object",
         "properties": {
           "key": {
@@ -12898,13 +12262,7 @@
       },
       "SyncPackagesFromMaestroCommand": {
         "required": [
-          "referenceNumber",
-          "shipmentTrackingLinkUrl",
-          "shippingCompany",
-          "shippingState",
-          "state",
-          "tenantName",
-          "trackingId"
+          "state"
         ],
         "type": "object",
         "properties": {
@@ -12950,8 +12308,7 @@
       },
       "CancelLineItemInput": {
         "required": [
-          "missingAmount",
-          "productSKU"
+          "missingAmount"
         ],
         "type": "object",
         "properties": {
@@ -12967,9 +12324,7 @@
       },
       "CancelLineItemFromMaestroCommand": {
         "required": [
-          "referenceNumber",
-          "tenantId",
-          "tenantName"
+          "tenantId"
         ],
         "type": "object",
         "properties": {
@@ -12993,12 +12348,6 @@
         "additionalProperties": false
       },
       "ProblemDetails": {
-        "required": [
-          "detail",
-          "instance",
-          "title",
-          "type"
-        ],
         "type": "object",
         "properties": {
           "type": {
@@ -13029,11 +12378,7 @@
       },
       "UpdateCargoCodeAndUrlCommand": {
         "required": [
-          "cargoCode",
-          "cargoDocumentUrl",
-          "referenceNumber",
-          "tenantId",
-          "tenantName"
+          "tenantId"
         ],
         "type": "object",
         "properties": {
@@ -13121,9 +12466,7 @@
       },
       "MaestroSalesOrderResponseJobMessage": {
         "required": [
-          "isSuccess",
-          "operationName",
-          "referenceNumber"
+          "isSuccess"
         ],
         "type": "object",
         "properties": {
@@ -13143,10 +12486,6 @@
         "additionalProperties": false
       },
       "UpdateSalesOrderDeliveryTypeCommand": {
-        "required": [
-          "referenceNumber",
-          "tenantName"
-        ],
         "type": "object",
         "properties": {
           "tenantName": {
@@ -13160,16 +12499,6 @@
       },
       "AddressReportResponseDTO": {
         "required": [
-          "addressFirstName",
-          "addressLastName",
-          "addressOne",
-          "addressPhone",
-          "addressTwo",
-          "city",
-          "company",
-          "country",
-          "district",
-          "postalCode",
           "referenceNumber"
         ],
         "type": "object",
@@ -13214,11 +12543,7 @@
       "LineItemOfPackageReportResponseDTO": {
         "required": [
           "amountInOrder",
-          "imageUrl",
-          "productCategory",
-          "productName",
-          "productType",
-          "sku"
+          "productType"
         ],
         "type": "object",
         "properties": {
@@ -13256,19 +12581,10 @@
       },
       "PackageReportResponseDTO": {
         "required": [
-          "cargoCode",
-          "cargoDocumentUrl",
           "createdAt",
           "gifftWrap",
-          "giftNotes",
           "id",
           "orderCreatedAt",
-          "referenceNumber",
-          "requestedCargoCarrier",
-          "salesChannel",
-          "shippingCompany",
-          "shippingState",
-          "shippingTrackingId",
           "state"
         ],
         "type": "object",
@@ -13517,7 +12833,10 @@
             "readOnly": true
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "required": [
+          "wrap"
+        ]
       },
       "SalesOrderDocumentVASResponseDTO": {
         "type": "object",
@@ -13726,8 +13045,7 @@
       },
       "CreateSalesOrderLineItemRequestDTO": {
         "required": [
-          "amountInOrder",
-          "sku"
+          "amountInOrder"
         ],
         "type": "object",
         "properties": {
@@ -13769,9 +13087,6 @@
       },
       "CreateSalesOrderCargoRequestDTO": {
         "required": [
-          "cargoCarrier",
-          "cargoCode",
-          "cargoDocumentUrl",
           "cargoType"
         ],
         "type": "object",
@@ -13797,7 +13112,6 @@
       },
       "CreateSalesOrderGiftVASRequestDTO": {
         "required": [
-          "giftNotes",
           "giftWrap"
         ],
         "type": "object",
@@ -13812,9 +13126,6 @@
         "additionalProperties": false
       },
       "CreateSalesOrderDocumentVASRequestDTO": {
-        "required": [
-          "documentUrl"
-        ],
         "type": "object",
         "properties": {
           "documentUrl": {
@@ -13824,9 +13135,6 @@
         "additionalProperties": false
       },
       "SyncSalesOrderVASRequestDTO": {
-        "required": [
-          "packageNote"
-        ],
         "type": "object",
         "properties": {
           "packageNote": {
@@ -13846,8 +13154,6 @@
           "billingAddress",
           "customer",
           "lineItems",
-          "referenceNumber",
-          "salesChannel",
           "shippingAddress"
         ],
         "type": "object",
@@ -14016,11 +13322,6 @@
         "additionalProperties": false
       },
       "UpdateSalesOrderCargoInfoRequestDTO": {
-        "required": [
-          "cargoCarrier",
-          "cargoCode",
-          "cargoDocumentUrl"
-        ],
         "type": "object",
         "properties": {
           "cargoCarrier": {
@@ -14036,10 +13337,6 @@
         "additionalProperties": false
       },
       "UpdateSalesOrderTagRequestDTO": {
-        "required": [
-          "referenceNumber",
-          "tag"
-        ],
         "type": "object",
         "properties": {
           "referenceNumber": {
@@ -14052,17 +13349,6 @@
         "additionalProperties": false
       },
       "UpdateSalesOrderInvoiceUrlAndAsnCommand": {
-        "required": [
-          "asn",
-          "invoiceUrl",
-          "packageReferenceNumber",
-          "shippingAddressCity",
-          "shippingAddressDistrict",
-          "shippingAddressEmail",
-          "shippingAddressFullAddress",
-          "shippingAddressFullName",
-          "shippingAddressPhone"
-        ],
         "type": "object",
         "properties": {
           "packageReferenceNumber": {
@@ -14100,8 +13386,7 @@
       },
       "CancelLineItemsRequestDTO": {
         "required": [
-          "amount",
-          "sku"
+          "amount"
         ],
         "type": "object",
         "properties": {
@@ -14118,15 +13403,10 @@
       "InvalidSalesOrderQueryOutputDTO": {
         "required": [
           "createdAt",
-          "customerFullName",
           "error",
           "id",
-          "integrationName",
           "isPaid",
-          "openApiIdentifier",
-          "paymentGatewayNames",
-          "referenceNumber",
-          "salesChannel"
+          "openApiIdentifier"
         ],
         "type": "object",
         "properties": {
@@ -14189,8 +13469,7 @@
       },
       "CreateSalesOrderLineItemInputDTO": {
         "required": [
-          "amountInOrder",
-          "sku"
+          "amountInOrder"
         ],
         "type": "object",
         "properties": {
@@ -14208,7 +13487,6 @@
         "required": [
           "billingAddressId",
           "customerId",
-          "referenceNumber",
           "shippingAddressId"
         ],
         "type": "object",
@@ -14274,9 +13552,6 @@
         "additionalProperties": false
       },
       "CreatedSalesOrderOutputDTO": {
-        "required": [
-          "referenceNumber"
-        ],
         "type": "object",
         "properties": {
           "referenceNumber": {
@@ -14289,28 +13564,20 @@
         "required": [
           "approved",
           "approvedShipments",
+          "cancelledProductCount",
           "cargoType",
-          "customerEmail",
-          "customerFullName",
           "customerNo",
-          "customerPhone",
           "id",
           "lastCompletedState",
           "openApiIdentifier",
           "orderCreatedAt",
           "paymentOption",
-          "referenceNumber",
           "returnCount",
-          "salesChannel",
-          "shippingAddress",
-          "shippingAddressCity",
-          "shippingAddressCountry",
-          "shippingAddressFullName",
+          "shippedProductCount",
           "state",
           "totalProductCount",
           "totalProductCountInSalesOrder",
-          "uniqueProductCount",
-          "warehouseLocation"
+          "uniqueProductCount"
         ],
         "type": "object",
         "properties": {
@@ -14435,10 +13702,7 @@
       },
       "InvalidSalesOrderLineItemQueryOutputDTO": {
         "required": [
-          "amountInOrder",
-          "productImageUrl",
-          "productName",
-          "sku"
+          "amountInOrder"
         ],
         "type": "object",
         "properties": {
@@ -14484,12 +13748,6 @@
         "additionalProperties": false
       },
       "InvalidSalesOrderDetailCustomerOutputDTO": {
-        "required": [
-          "email",
-          "firstName",
-          "lastName",
-          "phone"
-        ],
         "type": "object",
         "properties": {
           "email": {
@@ -14508,17 +13766,6 @@
         "additionalProperties": false
       },
       "InvalidSalesOrderDetailShippingAddressOutputDTO": {
-        "required": [
-          "addressFirstName",
-          "addressLastName",
-          "addressOne",
-          "addressPhone",
-          "addressTwo",
-          "city",
-          "country",
-          "district",
-          "postalCode"
-        ],
         "type": "object",
         "properties": {
           "addressFirstName": {
@@ -14554,7 +13801,6 @@
       "CommonIntegrationOutputDTO": {
         "required": [
           "id",
-          "name",
           "openApiIdentifier",
           "type"
         ],
@@ -14578,7 +13824,6 @@
       },
       "SalesOrderPaymentOutputDTO": {
         "required": [
-          "paymentGatewayNames",
           "paymentOption"
         ],
         "type": "object",
@@ -14604,11 +13849,7 @@
       },
       "InvalidSalesOrderDetailCargoOutputDTO": {
         "required": [
-          "cargoCarrier",
-          "cargoCode",
-          "cargoDocumentUrl",
-          "cargoType",
-          "requestedCargoCarrier"
+          "cargoType"
         ],
         "type": "object",
         "properties": {
@@ -14635,11 +13876,7 @@
           "createdAt",
           "error",
           "id",
-          "orderCreatedAt",
-          "orderId",
-          "referenceNumber",
-          "salesChannel",
-          "vasDocumentUrl"
+          "orderCreatedAt"
         ],
         "type": "object",
         "properties": {
@@ -14699,12 +13936,10 @@
           "barcodes",
           "cancellableAmount",
           "cancelledAmount",
-          "imageUrl",
           "isCancellable",
           "isPendingReason",
           "missingQuantity",
           "packableAmount",
-          "productCategory",
           "productName",
           "productType",
           "sku"
@@ -14788,12 +14023,6 @@
         "additionalProperties": false
       },
       "SerialNumbersOfSalesOrderQueryOutputDTO": {
-        "required": [
-          "packageReferenceNumber",
-          "productName",
-          "serialNumber",
-          "sku"
-        ],
         "type": "object",
         "properties": {
           "packageReferenceNumber": {
@@ -14847,7 +14076,6 @@
       "SalesOrderDetailOutputDTO": {
         "required": [
           "cargoType",
-          "customerFullName",
           "customerNo",
           "hasPackableLineItems",
           "hasPackage",
@@ -14858,12 +14086,7 @@
           "packageCreationType",
           "paymentOption",
           "pending",
-          "referenceNumber",
-          "shipmentTrackingLinkUrl",
-          "shippingAddress",
-          "shippingAddressFullName",
-          "state",
-          "trackingUrl"
+          "state"
         ],
         "type": "object",
         "properties": {
@@ -15006,12 +14229,6 @@
         "additionalProperties": false
       },
       "UpdateSalesOrderCargoInfoInputDTO": {
-        "required": [
-          "cargoCarrier",
-          "cargoCode",
-          "cargoDocumentUrl",
-          "referenceNumber"
-        ],
         "type": "object",
         "properties": {
           "referenceNumber": {
@@ -15030,9 +14247,6 @@
         "additionalProperties": false
       },
       "CancelSalesOrderCommand": {
-        "required": [
-          "referenceNumber"
-        ],
         "type": "object",
         "properties": {
           "referenceNumber": {
@@ -15061,9 +14275,7 @@
       },
       "CancelLineItemsInputDTO": {
         "required": [
-          "amount",
-          "referenceNumber",
-          "sku"
+          "amount"
         ],
         "type": "object",
         "properties": {
@@ -15082,8 +14294,7 @@
       },
       "CancelLineItems": {
         "required": [
-          "amount",
-          "sku"
+          "amount"
         ],
         "type": "object",
         "properties": {
@@ -15098,9 +14309,6 @@
         "additionalProperties": false
       },
       "BulkCancelLineItemsInput": {
-        "required": [
-          "referenceNumber"
-        ],
         "type": "object",
         "properties": {
           "referenceNumber": {
@@ -15129,8 +14337,7 @@
       },
       "CreatePackageLineItem": {
         "required": [
-          "amount",
-          "sku"
+          "amount"
         ],
         "type": "object",
         "properties": {
@@ -15145,9 +14352,6 @@
         "additionalProperties": false
       },
       "CreatePackageCommand": {
-        "required": [
-          "salesOrderReferenceNumber"
-        ],
         "type": "object",
         "properties": {
           "salesOrderReferenceNumber": {
@@ -15167,9 +14371,6 @@
         "additionalProperties": false
       },
       "CancelPackageCommand": {
-        "required": [
-          "referenceNumber"
-        ],
         "type": "object",
         "properties": {
           "referenceNumber": {
@@ -15180,17 +14381,11 @@
       },
       "PackageOutputDTO": {
         "required": [
-          "cargoDocumentUrl",
           "createdAt",
           "id",
-          "invoiceURL",
           "isCancellable",
           "isExternalContract",
-          "referenceNumber",
-          "shippingCompany",
-          "shippingTrackingId",
-          "state",
-          "trackingUrl"
+          "state"
         ],
         "type": "object",
         "properties": {
@@ -15266,8 +14461,6 @@
           "amountInOrder",
           "barcodes",
           "id",
-          "imageUrl",
-          "productCategory",
           "productName",
           "productType",
           "sku"
@@ -15326,12 +14519,6 @@
         "additionalProperties": false
       },
       "CorrectInvalidSalesOrderCustomer": {
-        "required": [
-          "email",
-          "firstName",
-          "lastName",
-          "phone"
-        ],
         "type": "object",
         "properties": {
           "email": {
@@ -15350,17 +14537,6 @@
         "additionalProperties": false
       },
       "CorrectInvalidSalesOrderShippingAddress": {
-        "required": [
-          "addressFirstName",
-          "addressLastName",
-          "addressOne",
-          "addressPhone",
-          "addressTwo",
-          "city",
-          "country",
-          "district",
-          "postalCode"
-        ],
         "type": "object",
         "properties": {
           "addressFirstName": {
@@ -15396,7 +14572,6 @@
       "CorrectInvalidSalesOrderPayment": {
         "required": [
           "currency",
-          "paymentGatewayNames",
           "totalPaymentAmount"
         ],
         "type": "object",
@@ -15419,9 +14594,6 @@
       },
       "CorrectInvalidSalesOrderCargo": {
         "required": [
-          "cargoCarrier",
-          "cargoCode",
-          "cargoDocumentUrl",
           "cargoType"
         ],
         "type": "object",
@@ -15443,10 +14615,7 @@
       },
       "CorrectInvalidSalesOrderCommand": {
         "required": [
-          "orderCreatedAt",
-          "orderId",
-          "salesChannel",
-          "vasDocumentUrl"
+          "orderCreatedAt"
         ],
         "type": "object",
         "properties": {
@@ -15506,8 +14675,6 @@
         "required": [
           "amountInOrder",
           "missingAmount",
-          "referenceNumber",
-          "sku",
           "usingAmount"
         ],
         "type": "object",
@@ -15671,9 +14838,6 @@
         "additionalProperties": false
       },
       "SalesOrdersSendToWmsInputDTO": {
-        "required": [
-          "tenantName"
-        ],
         "type": "object",
         "properties": {
           "tenantName": {
@@ -15693,7 +14857,6 @@
       },
       "SyncOutputItemDTO": {
         "required": [
-          "referenceCode",
           "succeed"
         ],
         "type": "object",
@@ -15769,9 +14932,6 @@
         "additionalProperties": false
       },
       "SalesOrdersFetchFromWmsInputDTO": {
-        "required": [
-          "tenantName"
-        ],
         "type": "object",
         "properties": {
           "tenantName": {
@@ -15796,9 +14956,6 @@
         "additionalProperties": false
       },
       "NotifyFulfilledSalesOrdersFromOSToIntegrationsInputDTO": {
-        "required": [
-          "tenantName"
-        ],
         "type": "object",
         "properties": {
           "tenantName": {
@@ -15877,7 +15034,14 @@
             "format": "int32"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "required": [
+          "foundAmount",
+          "id",
+          "lostAmount",
+          "putInQuarantineAmount",
+          "releaseFromQuarantineAmount"
+        ]
       },
       "StockTransactionsQueryResponseDTO": {
         "type": "object",
@@ -15938,10 +15102,6 @@
         "additionalProperties": false
       },
       "UpdateStockAdjustmentTagRequestDTO": {
-        "required": [
-          "tag",
-          "transactionNumber"
-        ],
         "type": "object",
         "properties": {
           "transactionNumber": {
@@ -15954,11 +15114,6 @@
         "additionalProperties": false
       },
       "StockQueryResponseDTO": {
-        "required": [
-          "id",
-          "name",
-          "sku"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -16083,13 +15238,6 @@
         "additionalProperties": false
       },
       "CompanyDTO": {
-        "required": [
-          "address",
-          "phone",
-          "taxAdministration",
-          "taxNo",
-          "title"
-        ],
         "type": "object",
         "properties": {
           "title": {
@@ -16117,7 +15265,6 @@
           "isLostItemAmountVisible",
           "isSameDayDeliveryActive",
           "isUIBulkCancelBlockedAllowed",
-          "name",
           "salesOrdersBlockedPackageDetailExcelExportLimit",
           "salesOrdersPackageDetailExcelExportLimit"
         ],
@@ -16154,13 +15301,6 @@
         "additionalProperties": false
       },
       "UpdateCompanyCommand": {
-        "required": [
-          "address",
-          "phone",
-          "taxAdministration",
-          "taxNo",
-          "title"
-        ],
         "type": "object",
         "properties": {
           "title": {
@@ -16200,11 +15340,7 @@
       },
       "TenantOutputDTO": {
         "required": [
-          "customerCode",
           "id",
-          "name",
-          "warehouseCode",
-          "warehouseLocation",
           "warehouseType"
         ],
         "type": "object",
@@ -16233,11 +15369,7 @@
       },
       "TenantDetailOutputDTO": {
         "required": [
-          "contractNo",
-          "customerCode",
-          "id",
-          "name",
-          "warehouseCode"
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -16313,11 +15445,7 @@
       },
       "CreateTenantCommand": {
         "required": [
-          "customerCode",
           "id",
-          "name",
-          "warehouseCode",
-          "warehouseLocation",
           "warehouseType",
           "wmsTenant"
         ],
@@ -16350,9 +15478,7 @@
       },
       "AddTenantConfigurationCommand": {
         "required": [
-          "key",
-          "tenantId",
-          "value"
+          "tenantId"
         ],
         "type": "object",
         "properties": {
@@ -16371,9 +15497,6 @@
       },
       "UpdateTenantConfigurationCommand": {
         "required": [
-          "isGiftNoteActive",
-          "isSameDayDeliveryActive",
-          "isUIBulkCancelBlockedAllowed",
           "tenantId"
         ],
         "type": "object",
@@ -16397,11 +15520,8 @@
       "TenantQueryOutputDTO": {
         "required": [
           "bufferStockAmount",
-          "customerCode",
           "id",
-          "isEnableFunctions",
-          "name",
-          "warehouseCode"
+          "isEnableFunctions"
         ],
         "type": "object",
         "properties": {
@@ -16467,11 +15587,7 @@
       },
       "TenantDetailsQueryOutputDTO": {
         "required": [
-          "customerCode",
-          "id",
-          "name",
-          "warehouseCode",
-          "warehouseLocation"
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -16590,10 +15706,6 @@
         "additionalProperties": false
       },
       "SendUserFeedbackCommand": {
-        "required": [
-          "body",
-          "subject"
-        ],
         "type": "object",
         "properties": {
           "subject": {
@@ -16622,9 +15734,6 @@
         "type": "string"
       },
       "UserRoleDTO": {
-        "required": [
-          "name"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -16635,9 +15744,6 @@
       },
       "UserDTO": {
         "required": [
-          "email",
-          "fullName",
-          "id",
           "status",
           "type"
         ],
@@ -16691,10 +15797,6 @@
         "additionalProperties": false
       },
       "CreateUserCommand": {
-        "required": [
-          "email",
-          "fullName"
-        ],
         "type": "object",
         "properties": {
           "fullName": {
@@ -16708,8 +15810,7 @@
       },
       "ChangeUserTypeCommand": {
         "required": [
-          "type",
-          "userId"
+          "type"
         ],
         "type": "object",
         "properties": {
@@ -16723,9 +15824,6 @@
         "additionalProperties": false
       },
       "DeleteUserCommand": {
-        "required": [
-          "userId"
-        ],
         "type": "object",
         "properties": {
           "userId": {
@@ -16735,15 +15833,6 @@
         "additionalProperties": false
       },
       "UpdateUserCommand": {
-        "required": [
-          "clientId",
-          "connection",
-          "email",
-          "password",
-          "phoneNumber",
-          "userId",
-          "userName"
-        ],
         "type": "object",
         "properties": {
           "userId": {
@@ -16798,13 +15887,8 @@
       },
       "CreateWebHookCommand": {
         "required": [
-          "basicAuthPass",
-          "basicAuthUser",
-          "bodyTemplate",
-          "headerTemplate",
           "hookType",
-          "tenantId",
-          "url"
+          "tenantId"
         ],
         "type": "object",
         "properties": {
@@ -16844,7 +15928,7 @@
   },
   "security": [
     {
-      "Authorization": [ ]
+      "Authorization": []
     }
   ]
 }
