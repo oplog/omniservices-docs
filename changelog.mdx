@@ -5,6 +5,28 @@ description: 'Track all updates, new features, and improvements to the OPLOG.ONE
 
 Track the evolution of OPLOG.ONE with our latest updates, new features, and platform improvements.
 
+<Update label="May 2026">
+  ### ✨ Added
+
+  * **Public Order Tracking** - New unauthenticated endpoint `GET /public/v1/OrderTracking/{oplogTrackingNumber}` lets recipients track packages without credentials
+  * **Sales Order Tracking Info API** - `GET /openapi/v1/SalesOrders/GetSalesOrdersTrackingInfo` returns package-level tracking data across orders
+  * **Update Cargo Info (body-based)** - `POST /openapi/v1/SalesOrders/UpdateSalesOrderCargoInfo` provides a body-based variant for updating cargo info; now supports ZPL labels alongside `cargoDocumentUrl`
+  * **Update VAS Document** - `POST /openapi/v1/SalesOrders/UpdateSalesOrderVasDocument` updates value-added service documents on orders in `Created` or `Picked` state
+  * **Inventory Lot Numbers** - `GET /openapi/v1/Products/inventoryLotNumbers` exposes lot-number breakdown for inventory tracking
+  * **ERP Stock Endpoint** - `GET /openapi/v1/Stocks/for-erp` returns stock levels with open receiving info from Maestro
+  * New error codes: `CargoCodeAndCargoDocumentUrlAndZplCannotBeNullOrEmpty`, `CargoDocumentUrlAndZplAreMutuallyExclusive`, `CargoInfoUpdateNotAllowedAfterPacked`, `EIrsaliyeIdOrETTNRequired`, `InvalidCargoDocumentZplForOpenApiIntegration`, `VasDocumentUpdateNotAllowedAfterPacked`
+
+  ### 🔄 Changed
+
+  * Synced `openapi.json` with the latest Omnitro backend swagger (44 endpoints across 9 tags including the new `OrderTracking` tag)
+  * Several response DTOs gained additional fields (`SalesOrderDetailOutputDTO`, `SalesOrderQueryOutputDTO`, `WarehouseInventoryItem`, `InventoryItem` etc.) — see API Reference for the full schemas
+
+  ### 🗑️ Removed
+
+  * Removed product activate/deactivate/star/unstar endpoints (both bulk `POST /Products/{activate|deactivate|star|unstar}` and single-resource `PUT /Products/{sku}:{activate|deactivate|star|unstar}` variants). Use `PATCH /openapi/v1/Products/Update` to set the equivalent state fields.
+  * Removed `PATCH /openapi/v1/Returns/UpdateReturnTag`. Tag updates for other resources (sales orders, receiving orders, products, stock adjustments) remain available.
+</Update>
+
 <Update label="June 2025">
   ### ✨ Added
 
