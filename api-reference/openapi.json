@@ -72,7 +72,8 @@
         "tags": [
           "Company"
         ],
-        "summary": "Create a B2B company. Persisted as a Customer keyed by its external company number;\r\nthe company number is unique per tenant (duplicates are rejected).",
+        "summary": "Create a B2B company.",
+        "description": "Persisted as a Customer keyed by its external company number; the company number is\r\nunique per tenant (duplicates are rejected).",
         "parameters": [
           {
             "name": "X-Tenant-Id",
@@ -119,7 +120,8 @@
         "tags": [
           "Company"
         ],
-        "summary": "Update an existing company (matched by company number within the tenant). Returns 404 if the\r\ncompany number is not found. Only supplied fields are applied.",
+        "summary": "Update an existing company.",
+        "description": "Matched by company number within the tenant. Returns 404 if the company number is not\r\nfound. Only supplied fields are applied.",
         "parameters": [
           {
             "name": "companyNo",
@@ -491,7 +493,8 @@
         "tags": [
           "Lots"
         ],
-        "summary": "Upsert lot/batch master data. Key is (SKU, LotNumber): existing -&gt; update, new -&gt; insert.\r\nUnknown SKUs are skipped (returned in the result), not failed.",
+        "summary": "Upsert lot/batch master data.",
+        "description": "Key is (SKU, LotNumber): an existing pair is updated, a new pair is inserted.\r\nUnknown SKUs are skipped (returned in the result), not failed.",
         "parameters": [
           {
             "name": "X-Tenant-Id",
@@ -1346,7 +1349,8 @@
         "tags": [
           "QualityRelease"
         ],
-        "summary": "Report a quality decision for a lot held in quality control during goods-in. The lot is\r\nresolved to the SKUs received under it; Released and Conditional releases are relayed to the\r\nwarehouse so the quality-held items become eligible for putaway (a Conditional release is\r\ntracked via its conditionNote). Rejected decisions are captured and acknowledged, but the\r\nwarehouse-side blocked-stock transition is pending, so they are not yet applied in the\r\nwarehouse (status CapturedNotRelayed). Each request is stored as one immutable audit record;\r\nre-sending the same decision is allowed.",
+        "summary": "Report a quality decision for a lot held in quality control.",
+        "description": "The lot is resolved to the SKUs received under it during goods-in; Released and Conditional\r\nreleases are relayed to the warehouse so the quality-held items become eligible for putaway\r\n(a Conditional release is tracked via its conditionNote). Rejected decisions are captured and\r\nacknowledged, but the warehouse-side blocked-stock transition is pending, so they are not yet\r\napplied in the warehouse (status CapturedNotRelayed). Each request is stored as one immutable\r\naudit record; re-sending the same decision is allowed.",
         "parameters": [
           {
             "name": "X-Tenant-Id",
@@ -1671,7 +1675,8 @@
         "tags": [
           "ReceivingOrders"
         ],
-        "summary": "Bulk add or update ReceivingOrders. An order whose referenceNumber already exists is updated in place\r\n(line items only); otherwise it is created. Always returns 200; orders that cannot be updated are\r\nreported in updateFailures.",
+        "summary": "Bulk add or update ReceivingOrders.",
+        "description": "An order whose referenceNumber already exists is updated in place (line items only);\r\notherwise it is created. Always returns 200; orders that cannot be updated are reported\r\nin updateFailures.",
         "parameters": [
           {
             "name": "X-Tenant-Id",
@@ -2677,7 +2682,8 @@
         "tags": [
           "Shipments"
         ],
-        "summary": "Upsert a shipment grouping several sales orders. Keyed by shipmentNo within the tenant:\r\nre-sending reconciles the shipment's membership (attaches new orders, moves orders in from\r\nanother shipment, and detaches orders no longer listed). Rejects the whole request if any\r\nreferenced order is unknown or is past the pre-ship stage.",
+        "summary": "Upsert a shipment grouping several sales orders.",
+        "description": "Keyed by shipmentNo within the tenant: re-sending reconciles the shipment's membership\r\n(attaches new orders, moves orders in from another shipment, and detaches orders no longer\r\nlisted). Rejects the whole request if any referenced order is unknown or is past the\r\npre-ship stage.",
         "parameters": [
           {
             "name": "X-Tenant-Id",
@@ -2741,7 +2747,8 @@
         "tags": [
           "Shipments"
         ],
-        "summary": "Soft-delete a shipment by its number. Its sales orders are detached (freed to be regrouped),\r\nnot deleted. Returns 404 if the shipment number is not found for the tenant.",
+        "summary": "Delete a shipment.",
+        "description": "Soft-deletes the shipment by its number. Its sales orders are detached (freed to be\r\nregrouped), not deleted. Returns 404 if the shipment number is not found for the tenant.",
         "parameters": [
           {
             "name": "shipmentNo",
